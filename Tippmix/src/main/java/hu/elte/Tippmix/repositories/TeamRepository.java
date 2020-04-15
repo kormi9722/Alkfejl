@@ -6,9 +6,8 @@
 package hu.elte.Tippmix.repositories;
 
 import hu.elte.Tippmix.entities.Team;
-import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 
 public interface TeamRepository extends CrudRepository<Team, Integer>{
-    Optional<Team> findByName(String name);
+
 }
