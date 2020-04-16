@@ -47,9 +47,9 @@ Szakterületi fogalomjegyzék:
 
 ## Use-case modell:
 ### Szerepkörök:
-Vendég: Nem regisztrált látogató, lehetősége van regisztrációra
-Tag: Regisztrált és bejelentkezett látogató, lehetősége van szelvényeket kitölteni és csoportokba jelentkezni
-Adminisztrátor: Fordulók párosításának generálása, eredmények generálása, tagok kizárása csoportokból
+* Vendég: Nem regisztrált látogató, lehetősége van regisztrációra
+* Tag: Regisztrált és bejelentkezett látogató, lehetősége van szelvényeket kitölteni és csoportokba jelentkezni
+* Adminisztrátor: Fordulók párosításának generálása, eredmények generálása, tagok kizárása csoportokból
 
 ### Use-case modell:
 ![Use-case model](UC1.jpg)
