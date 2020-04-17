@@ -27,13 +27,12 @@ public class Group implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
-    @Column(unique = true)
+    @Column(name = "NAME")
     @NotNull
     private String name;
     
-    @Column
     @ManyToMany
     @JoinTable
-    private List<User> users;
+    private List<User> user;
 
 }
