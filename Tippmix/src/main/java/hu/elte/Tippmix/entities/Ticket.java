@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Data
@@ -34,5 +35,9 @@ public class Ticket implements Serializable {
     @ManyToOne
     @JoinColumn
     private User user;
+    
+    @Column(name = "BETS")
+    @NotNull
+    private List<Character> bets;
  
 }
