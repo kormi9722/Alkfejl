@@ -1,13 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- * Author:  w10_3
- * Created: 2020.04.16.
- */
-
 insert into team(id, name) values (1, 'Fradi');
 insert into team(id, name) values(2, 'Újpest');
 
