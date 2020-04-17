@@ -2,9 +2,7 @@ package hu.elte.Tippmix.controllers;
 
 import hu.elte.Tippmix.entities.Ticket;
 import hu.elte.Tippmix.repositories.TicketRepository;
-import java.util.ArrayList;
 import java.util.Optional;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 
 @RestController
 @RequestMapping("/tickets")
@@ -30,15 +27,7 @@ public class TicketController {
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<Iterable<Ticket>> getAllUserTicket(@PathVariable Integer userId)
-    {
-        List<Integer> ids = new ArrayList<>();
-        ids.add(userId);
-        return ResponseEntity.ok(ticketRepository.findAllById(ids));
-    }
-    
-    @GetMapping("/{id}")
-    public ResponseEntity<Ticket> getUserTicket(@PathVariable Integer id)
+    public ResponseEntity<Ticket> get(@PathVariable Integer id)
     {
         Optional<Ticket> ticket = ticketRepository.findById(id);
         if(ticket.isPresent())
@@ -61,8 +50,8 @@ public class TicketController {
     @PutMapping("/{id}")
     public ResponseEntity<Ticket> put(@RequestBody Ticket ticket, @PathVariable Integer id)
     {
-        Optional<Ticket> oTeam = ticketRepository.findById(id);
-        if(oTeam.isPresent())
+        Optional<Ticket> oTicket = ticketRepository.findById(id);
+        if(oTicket.isPresent())
         {
             ticket.setId(id);
             return ResponseEntity.ok(ticketRepository.save(ticket));
@@ -76,7 +65,7 @@ public class TicketController {
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable Integer id)
     {
-        Optional<Ticket> oTicket=ticketRepository.findById(id);
+        Optional<Ticket> oTicket = ticketRepository.findById(id);
         if(oTicket.isPresent())
         {
             ticketRepository.deleteById(id);
