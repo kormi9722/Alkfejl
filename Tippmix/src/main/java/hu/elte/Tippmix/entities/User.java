@@ -37,11 +37,11 @@ public class User implements Serializable {
     
     @JsonIgnore
     @OneToMany(mappedBy = "user")
-    private List<Ticket> ticket;
+    private List<Ticket> tickets;
     
     @JsonIgnore
     @ManyToMany(mappedBy = "user")
-    private List<Group> group;
+    private List<Group> groups;
     
     
 }
