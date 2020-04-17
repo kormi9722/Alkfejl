@@ -56,3 +56,19 @@ Szakterületi fogalomjegyzék:
 
 ### Szelvények kitöltésének menete:
 ![Kitöltés](UC2.jpg)
+
+## Fejlesztői környezet:
+### Fejlesztői környezet bemutatása:
+* NetBeans IDE
+
+### Fejlesztői környezet beállítása:
+
+### Használt technológiák
+* Java
+* Spring
+* Lombok
+* Maven
+* SQL
+
+## Táblák kapcsolati UML diagramja:
+![Diagram](UC2.jpg)
