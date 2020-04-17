@@ -41,7 +41,7 @@ public class User implements Serializable {
     
     @JsonIgnore
     @ManyToMany(mappedBy = "user")
-    private List<Group> groups;
+    private List<League> leagues;
     
     
 }

@@ -21,7 +21,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @EqualsAndHashCode
 
-public class Group implements Serializable{
+public class League implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
