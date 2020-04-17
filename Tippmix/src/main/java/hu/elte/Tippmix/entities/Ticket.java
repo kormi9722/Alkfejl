@@ -7,12 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import java.util.List;
 import java.io.Serializable;
 
 @Entity
@@ -27,18 +26,13 @@ public class Ticket implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
-    @Column
-    @NotNull
-    @ManyToOne
-    @JoinColumn
-    private User user;
     
-    @Column
+    @Column(name = "FIXTURE")
     @NotNull
     private Integer fixture;
     
-    @Column
-    @NotNull
-    private List<Integer> bets;
-
+    @ManyToOne
+    @JoinColumn
+    private User user;
+ 
 }
