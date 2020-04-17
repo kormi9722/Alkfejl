@@ -62,6 +62,13 @@ Szakterületi fogalomjegyzék:
 * NetBeans IDE
 
 ### Fejlesztői környezet beállítása:
+#### Dependencies:
+* org.springframework.boot
+* com.h2database
+* org.projectlombok
+* org.junit.vintage
+
+
 
 ### Használt technológiák:
 * Java
