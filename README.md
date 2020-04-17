@@ -63,7 +63,7 @@ Szakterületi fogalomjegyzék:
 
 ### Fejlesztői környezet beállítása:
 
-### Használt technológiák
+### Használt technológiák:
 * Java
 * Spring
 * Lombok
