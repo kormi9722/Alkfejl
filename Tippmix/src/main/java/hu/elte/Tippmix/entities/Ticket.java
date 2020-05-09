@@ -12,8 +12,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Data
@@ -21,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode
 
-public class Ticket implements Serializable {
+public class Ticket{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,6 +36,6 @@ public class Ticket implements Serializable {
     
     @Column(name = "BETS")
     @NotNull
-    private List<Character> bets;
- 
+    private String bets;
+   
 }

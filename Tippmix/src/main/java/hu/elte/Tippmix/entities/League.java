@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import java.util.List;
-import java.io.Serializable;
 
 @Entity
 @Data
@@ -21,7 +20,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @EqualsAndHashCode
 
-public class League implements Serializable{
+public class League {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

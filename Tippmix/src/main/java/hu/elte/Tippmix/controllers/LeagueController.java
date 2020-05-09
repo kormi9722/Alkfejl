@@ -1,7 +1,7 @@
 package hu.elte.Tippmix.controllers;
 
-import hu.elte.Tippmix.entities.Group;
-import hu.elte.Tippmix.repositories.GroupRepository;
+import hu.elte.Tippmix.entities.League;
+import hu.elte.Tippmix.repositories.LeagueRepository;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,24 +15,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/groups")
-public class GroupController {
+@RequestMapping("/leagues")
+public class LeagueController {
     @Autowired
-    private GroupRepository groupRepository;
+    private LeagueRepository leagueRepository;
     
     @GetMapping("")
-    public ResponseEntity<Iterable<Group>> getAll()
+    public ResponseEntity<Iterable<League>> getAll()
     {
-        return ResponseEntity.ok(groupRepository.findAll());
+        return ResponseEntity.ok(leagueRepository.findAll());
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<Group> get(@PathVariable Integer id)
+    public ResponseEntity<League> get(@PathVariable Integer id)
     {
-        Optional<Group> group = groupRepository.findById(id);
-        if(group.isPresent())
+        Optional<League> league = leagueRepository.findById(id);
+        if(league.isPresent())
         {
-            return ResponseEntity.ok(group.get());
+            return ResponseEntity.ok(league.get());
         }
         else
         {
@@ -41,19 +41,19 @@ public class GroupController {
     }
     
     @PostMapping("")
-    public ResponseEntity<Group> post(@PathVariable Group group)
+    public ResponseEntity<League> post(@PathVariable League league)
     {
-        Group savedGroup = groupRepository.save(group);
-        return ResponseEntity.ok(savedGroup);
+        League savedLeague = leagueRepository.save(league);
+        return ResponseEntity.ok(savedLeague);
     }
     
     @PutMapping("/{id}")
-    public ResponseEntity<Group> put(@RequestBody Group group, @PathVariable Integer id)
+    public ResponseEntity<League> put(@RequestBody League league, @PathVariable Integer id)
     {
-        Optional<Group> oGroup = groupRepository.findById(id);
-        if(oGroup.isPresent())
+        Optional<League> oLeague = leagueRepository.findById(id);
+        if(oLeague.isPresent())
         {;
-            return ResponseEntity.ok(groupRepository.save(group));
+            return ResponseEntity.ok(leagueRepository.save(league));
         }
         else
         {
@@ -64,10 +64,10 @@ public class GroupController {
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable Integer id)
     {
-        Optional<Group> oGroup = groupRepository.findById(id);
-        if(oGroup.isPresent())
+        Optional<League> oLeague = leagueRepository.findById(id);
+        if(oLeague.isPresent())
         {
-            groupRepository.deleteById(id);
+            leagueRepository.deleteById(id);
             return  ResponseEntity.ok().build();
         }
         else

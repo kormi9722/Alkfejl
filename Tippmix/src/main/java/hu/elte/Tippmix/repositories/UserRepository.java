@@ -1,8 +1,9 @@
 package hu.elte.Tippmix.repositories;
 
-import hu.elte.Tippmix.entities.Team;
+import hu.elte.Tippmix.entities.User;
+import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<Team, Integer>{
-
+public interface UserRepository extends CrudRepository<User, Long>{
+  Optional<User> findByUsername(String username);
 }
