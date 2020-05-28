@@ -1,4 +1,4 @@
-<h1 class="display-2">My tickets</h1>
+<!-- <h1 class="display-2">My tickets</h1>
 <table class="table">
     <thead>
         <tr>
@@ -24,4 +24,26 @@
             <td>Bad</td>
         </tr>
     </tbody>
-</table>
+</table> -->
+
+<div class="row">
+    <div class="col">
+      <h1 class="display-2">My tickets</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Fixture</th>
+            <th scope="col">Bets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ticket of tickets ">
+            <th scope="row">{{ ticket.id }}</th>
+            <td>{{ ticket.fixture }}</td>
+            <td>{{ ticket.bets }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
