@@ -20,7 +20,7 @@ export class TicketListComponent implements OnInit {
         id: 2,
         fixture: 30,
         bets: 'Middle',
-        status: 'IMPROGRESS'
+        status: 'INPROGRESS'
       },
       {
         id: 3,
@@ -31,18 +31,25 @@ export class TicketListComponent implements OnInit {
     ]
 
   filteredTicket: Ticket[];
-  selectedTicket: string;
+  selectedStatus: string;
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.selectedTicket = '';
+  ngOnInit() {
+    this.selectedStatus = '';
     this.filter();
   }
+
+  onFilterChange(status: string) {
+    this.selectedStatus = status;
+    this.filter();
+  }
+
+
   filter() {
-    this.filteredTicket = this.selectedTicket === ''
+    this.filteredTicket = this.selectedStatus === ''
       ? this.tickets
-      : this.tickets.filter(ticket => ticket.status === this.selectedTicket);
+      : this.tickets.filter(ticket => ticket.status === this.selectedStatus);
 
   }
 

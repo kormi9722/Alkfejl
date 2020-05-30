@@ -1,34 +1,8 @@
-<!-- <h1 class="display-2">My tickets</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Fixture</th>
-            <th scope="col">Bets</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>30</td>
-            <td>Good</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>300</td>
-            <td>Middle</td>
-        </tr>
-        <tr>
-            <th scope="row">1</th>
-            <td>-30</td>
-            <td>Bad</td>
-        </tr>
-    </tbody>
-</table> -->
-
 <div class="row">
     <div class="col">
       <h1 class="display-2">My tickets</h1>
+      <status-filter [status]="selectedStatus" (onChange)="onFilterChange($event)"></status-filter>
+      
       <table class="table">
         <thead>
           <tr>
