@@ -11,13 +11,19 @@ import { TicketListComponent } from './ticket-list/ticket-list.component';
 import { TicketDetailComponent } from './ticket-detail/ticket-detail.component';
 import { TicketFormComponent } from './ticket-form/ticket-form.component'
 import { RoutingModule } from './routing/routing.module';
+import { LeagueListComponent } from './league-list/league-list.component';
+import { StatusFilterComponent } from './status-filter/status-filter.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TicketListComponent,
     TicketDetailComponent,
-    TicketFormComponent
+    TicketFormComponent,
+    LeagueListComponent,
+    StatusFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,8 @@ import { RoutingModule } from './routing/routing.module';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    RoutingModule
+    RoutingModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

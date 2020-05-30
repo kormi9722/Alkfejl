@@ -1,10 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { TicketListComponent } from '../ticket-list/ticket-list.component';
 import { TicketFormComponent } from '../ticket-form/ticket-form.component';
 import { TicketDetailComponent } from '../ticket-detail/ticket-detail.component';
+import { LeagueListComponent } from '../league-list/league-list.component';
 
 const routes: Routes = [
   {
@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'tickets/:id',
     component: TicketDetailComponent
+  },
+  {
+    path: 'leagues',
+    component: LeagueListComponent
   },
 ];
 
