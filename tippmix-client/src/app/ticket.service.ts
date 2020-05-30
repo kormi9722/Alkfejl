@@ -12,7 +12,7 @@ export class TicketService {
         id: 1,
         fixture: 300,
         bets: 'Good',
-        status: 'NEW',
+        status: 'WINNER',
       },
       {
         id: 2,
@@ -30,7 +30,7 @@ export class TicketService {
         id: 4,
         fixture: 0,
         bets: 'Bad',
-        status: 'WAITING FOR RESULT'
+        status: 'NEW'
       }
     ]
   constructor() { }

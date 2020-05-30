@@ -1,25 +1,30 @@
 <div class="row">
-    <div class="col">
-      <h1 class="display-2">My tickets</h1>
-      <status-filter [status]="selectedStatus" (onChange)="onFilterChange($event)"></status-filter>
-      
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Fixture</th>
-            <th scope="col">Bets</th>
-            <th scope="col">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let ticket of filteredTicket ">
-            <th scope="row">{{ ticket.id }}</th>
-            <td>{{ ticket.fixture }}</td>
-            <td>{{ ticket.bets }}</td>
-            <td>{{ ticket.status }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="col">
+    <h1 class="display-2">My tickets</h1>
+    <status-filter [status]="selectedStatus" (onChange)="onFilterChange($event)"></status-filter>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Fixture</th>
+          <th scope="col">Bets</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of filteredTicket ">
+          <th scope="row">{{ ticket.id }}</th>
+          <td>{{ ticket.fixture }}</td>
+          <!-- <td>{{ ticket.bets }}</td> -->
+          <td>
+            <a [routerLink]="['/tickets', ticket.id]">
+              {{ ticket.bets }}
+            </a>
+          </td>
+          <td>{{ ticket.status }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>

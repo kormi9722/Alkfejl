@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class StatusFilterComponent implements OnInit {
 
-  statuses: string[] = [ 'NEW', 'INPROGRESS', 'RESOLVED', 'CLOSED' ];
+  statuses: string[] = [ 'NEW', 'WINNER', 'LOST', 'WAITING FOR RESULT' ];
   @Input('status') selectedStatus: string = '';
   @Output() onChange = new EventEmitter<string>();
 
