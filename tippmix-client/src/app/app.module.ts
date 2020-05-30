@@ -14,6 +14,7 @@ import { RoutingModule } from './routing/routing.module';
 import { LeagueListComponent } from './league-list/league-list.component';
 import { StatusFilterComponent } from './status-filter/status-filter.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { NewTicketComponent } from './new-ticket/new-ticket.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     TicketDetailComponent,
     TicketFormComponent,
     LeagueListComponent,
-    StatusFilterComponent
+    StatusFilterComponent,
+    NewTicketComponent
   ],
   imports: [
     BrowserModule,

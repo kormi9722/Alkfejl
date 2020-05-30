@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col">
+    <h1 class="display-2">New Ticket</h1>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Fixture</th>
+        <th scope="col">Match ID</th>
+        <th scope="col">Home Team</th>
+        <th scope="col">Home Score</th>
+        <th scope="col">Away Score</th>
+        <th scope="col">Away Team</th>
+        <th scope="col">Outcome</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let fixture of fixtures ">
+        <th scope="row">{{ fixture.fixture }}</th>
+        <td>{{ fixture.fixture_id }}</td>
+        <td>{{ fixture.home }}</td>
+        <td>{{ fixture.home_score }}</td>
+        <td>{{ fixture.away_score }}</td>
+        <td>{{ fixture.away }}</td>
+        <td>{{ fixture.outcome }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

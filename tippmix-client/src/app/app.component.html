@@ -7,7 +7,7 @@
   <span class="fill-remaining-space" fxHide="false" fxHide.gt-sm></span>
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
     <button mat-button href="/tickets" routerLink="/tickets">My tickets</button>
-    <button mat-button href="/tickets/add" routerLink="/tickets/new">New tickets</button>
+    <button mat-button href="/tickets/add" routerLink="/tickets/new">New ticket</button>
     <button mat-button href="/leagues" routerLink="/leagues">Leagues</button>
   </div>
   <button mat-icon-button [matMenuTriggerFor]="menu" fxHide="false" fxHide.gt-sm>
@@ -16,7 +16,7 @@
 </mat-toolbar>
 <mat-menu xPosition="before" #menu="matMenu">
   <button mat-menu-item href="/tickets" >My tickets</button>
-  <button mat-menu-item href="/tickets/add">New tickets</button>
+  <button mat-menu-item href="/tickets/add">New ticket</button>
   <button mat-menu-item href="/leagues">Leagues</button>
 </mat-menu>
 

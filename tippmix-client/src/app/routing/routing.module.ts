@@ -5,6 +5,8 @@ import { TicketListComponent } from '../ticket-list/ticket-list.component';
 import { TicketFormComponent } from '../ticket-form/ticket-form.component';
 import { TicketDetailComponent } from '../ticket-detail/ticket-detail.component';
 import { LeagueListComponent } from '../league-list/league-list.component';
+import { NewTicketComponent } from '../new-ticket/new-ticket.component';
+
 
 const routes: Routes = [
   {
@@ -18,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'tickets/new',
-    component: TicketFormComponent
+    component: NewTicketComponent
   },
   {
     path: 'tickets/:id',
