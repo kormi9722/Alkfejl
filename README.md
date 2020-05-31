@@ -76,6 +76,8 @@ Szakterületi fogalomjegyzék:
 * Lombok
 * Maven
 * SQL
+* Angular
+* Bootstrap
 
 ## Táblák kapcsolati UML diagramja:
 ![Diagram](database.jpg)
