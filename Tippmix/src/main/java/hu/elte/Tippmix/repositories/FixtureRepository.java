@@ -5,9 +5,9 @@
  */
 package hu.elte.Tippmix.repositories;
 
-import hu.elte.Tippmix.entities.Team;
+import hu.elte.Tippmix.entities.Fixture;
 import org.springframework.data.repository.CrudRepository;
 
-public interface TeamRepository extends CrudRepository<Team, Integer>{
+public interface FixtureRepository extends CrudRepository<Fixture, Integer>{
 
 }

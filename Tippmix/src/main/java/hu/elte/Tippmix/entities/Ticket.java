@@ -1,5 +1,6 @@
 package hu.elte.Tippmix.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +14,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 @Data
@@ -26,17 +28,16 @@ public class Ticket{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
-    
-    @Column(name = "FIXTURE")
-    @NotNull
-    private Integer fixture;
+    @ManyToOne
+    @JoinColumn
+    private Fixture fixture;
     
     @ManyToOne
     @JoinColumn
     private User user;
     
-    @Column(name = "BETS")
+    @Column(name = "BET")
     @NotNull
-    private String bets;
+    private String bet;
    
 }

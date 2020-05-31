@@ -6,8 +6,7 @@
 
 package hu.elte.Tippmix.controllers;
 
-import hu.elte.Tippmix.entities.Team;
-import hu.elte.Tippmix.repositories.TeamRepository;
+import hu.elte.Tippmix.entities.Fixture;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,27 +18,28 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import hu.elte.Tippmix.repositories.FixtureRepository;
 
 /**
  *
  * @author w10_3
  */
 @RestController
-@RequestMapping("/teams")
-public class TeamController {
+@RequestMapping("/fixtures")
+public class FixtureController {
     @Autowired
-    private TeamRepository teamRepository;
+    private FixtureRepository fixtureRepository;
     
     @GetMapping("")
-    public ResponseEntity<Iterable<Team>> getAll()
+    public ResponseEntity<Iterable<Fixture>> getAll()
     {
-        return ResponseEntity.ok(teamRepository.findAll());
+        return ResponseEntity.ok(fixtureRepository.findAll());
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<Team> get(@PathVariable Integer id)
+    public ResponseEntity<Fixture> get(@PathVariable Integer id)
     {
-        Optional<Team> team = teamRepository.findById(id);
+        Optional<Fixture> team = fixtureRepository.findById(id);
         if(team.isPresent())
         {
             return ResponseEntity.ok(team.get());
@@ -51,20 +51,20 @@ public class TeamController {
     }
     
     @PostMapping("")
-    public ResponseEntity<Team> post(@PathVariable Team team)
+    public ResponseEntity<Fixture> post(@PathVariable Fixture fixture)
     {
-        Team savedTeam=teamRepository.save(team);
-        return ResponseEntity.ok(savedTeam);
+        Fixture savedFixture=fixtureRepository.save(fixture);
+        return ResponseEntity.ok(savedFixture);
     }
     
     @PutMapping("/{id}")
-    public ResponseEntity<Team> put(@RequestBody Team team, @PathVariable Integer id)
+    public ResponseEntity<Fixture> put(@RequestBody Fixture fixture, @PathVariable Integer id)
     {
-        Optional<Team> oTeam = teamRepository.findById(id);
-        if(oTeam.isPresent())
+        Optional<Fixture> oFixture = fixtureRepository.findById(id);
+        if(oFixture.isPresent())
         {
-            team.setId(id);
-            return ResponseEntity.ok(teamRepository.save(team));
+            fixture.setId(id);
+            return ResponseEntity.ok(fixtureRepository.save(fixture));
         }
         else
         {
@@ -75,10 +75,10 @@ public class TeamController {
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable Integer id)
     {
-        Optional<Team> oTeam=teamRepository.findById(id);
-        if(oTeam.isPresent())
+        Optional<Fixture> oFixture=fixtureRepository.findById(id);
+        if(oFixture.isPresent())
         {
-            teamRepository.deleteById(id);
+            fixtureRepository.deleteById(id);
             return  ResponseEntity.ok().build();
         }
         else

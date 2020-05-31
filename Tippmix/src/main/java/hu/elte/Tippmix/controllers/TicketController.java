@@ -1,8 +1,9 @@
 package hu.elte.Tippmix.controllers;
 
+import hu.elte.Tippmix.entities.Fixture;
 import hu.elte.Tippmix.entities.Ticket;
+import hu.elte.Tippmix.repositories.FixtureRepository;
 import hu.elte.Tippmix.repositories.TicketRepository;
-import hu.elte.Tippmix.repositories.UserRepository;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TicketController {
     @Autowired
     private TicketRepository ticketRepository;
+    
+    @Autowired
+    private FixtureRepository fixtureRepository;
   
     @GetMapping("")
     public ResponseEntity<Iterable<Ticket>> getAll()
@@ -78,5 +82,6 @@ public class TicketController {
         }
     }
     
+   
     
 }
