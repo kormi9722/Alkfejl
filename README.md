@@ -78,4 +78,4 @@ Szakterületi fogalomjegyzék:
 * SQL
 
 ## Táblák kapcsolati UML diagramja:
-![Diagram](Tablak_Kapcsolati_Diagramja.jpg)
+![Diagram](database.jpg)
