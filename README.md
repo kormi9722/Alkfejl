@@ -60,6 +60,7 @@ Szakterületi fogalomjegyzék:
 ## Fejlesztői környezet:
 ### Fejlesztői környezet bemutatása:
 * NetBeans IDE
+* Visual Studio Code
 
 ### Fejlesztői környezet beállítása:
 #### Dependencies:
