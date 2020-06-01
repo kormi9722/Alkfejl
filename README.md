@@ -83,7 +83,7 @@ Szakterületi fogalomjegyzék:
 ## Táblák kapcsolati UML diagramja:
 ![Diagram](database.jpg)
 
-##Könytárstruktúra:
+## Könytárstruktúra:
 * Backend:
 ![backend könyvtár](libary_backend.png)
 * Frontend:
