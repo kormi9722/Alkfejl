@@ -84,7 +84,7 @@ Szakterületi fogalomjegyzék:
 ![Diagram](database.jpg)
 
 ##Könytárstruktúra:
-*Backend:
+* Backend:
 ![backend könyvtár](libary_backend.png)
-*Frontend:
+* Frontend:
 ![fronend könyvtár](libary_frontend.png)
