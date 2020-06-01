@@ -85,6 +85,6 @@ Szakterületi fogalomjegyzék:
 
 ##Könytárstruktúra:
 *Backend:
-![backend könyvtár](libaty_backend.png)
+![backend könyvtár](libary_backend.png)
 *Frontend:
 ![fronend könyvtár](libary_frontend.png)
